@@ -13,6 +13,11 @@ func GreetInSpanish(ctx context.Context, name string) (string, error) {
 	return greeting, err
 }
 
+func FarewellInSpanish(ctx context.Context, name string) (string, error) {
+	farewell, err := callService("get-spanish-farewell", name)
+	return farewell, err
+}
+
 // TODO: write an Activity function that calls the microservice to
 // get a farewell message in Spanish. It will be identical to the
 // function above, except the first argument to the callService

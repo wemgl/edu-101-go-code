@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	"finale"
 	"log"
 	"os"
-	finale "temporal101/exercises/finale-workflow"
 
 	"go.temporal.io/sdk/client"
 )

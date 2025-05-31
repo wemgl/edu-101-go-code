@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	"farewell"
 	"log"
 	"os"
-	farewell "temporal101/exercises/farewell-workflow/practice"
 
 	"go.temporal.io/sdk/client"
 )

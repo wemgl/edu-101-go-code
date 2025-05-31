@@ -1,12 +1,13 @@
 package main
 
 import (
-	"log"
-	hello "temporal101/exercises/hello-workflow/practice"
-
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
+	"hello"
+	"log"
 )
+
+const TaskQueueName = "greeting-tasks"
 
 func main() {
 	c, err := client.Dial(client.Options{})
@@ -15,8 +16,7 @@ func main() {
 	}
 	defer c.Close()
 
-	// TODO: modify the statement below to specify the task queue name
-	w := worker.New(c, "TODO", worker.Options{})
+	w := worker.New(c, TaskQueueName, worker.Options{})
 
 	w.RegisterWorkflow(hello.GreetSomeone)
 

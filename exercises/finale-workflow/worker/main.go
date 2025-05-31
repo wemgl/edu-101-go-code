@@ -1,8 +1,8 @@
 package main
 
 import (
+	"finale"
 	"log"
-	finale "temporal101/exercises/finale-workflow"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"

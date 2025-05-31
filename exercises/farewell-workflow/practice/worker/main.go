@@ -1,8 +1,8 @@
 package main
 
 import (
+	"farewell"
 	"log"
-	farewell "temporal101/exercises/farewell-workflow/practice"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
@@ -19,8 +19,7 @@ func main() {
 
 	w.RegisterWorkflow(farewell.GreetSomeone)
 	w.RegisterActivity(farewell.GreetInSpanish)
-
-	// TODO: register your Activity
+	w.RegisterActivity(farewell.FarewellInSpanish)
 
 	err = w.Run(worker.InterruptCh())
 	if err != nil {
